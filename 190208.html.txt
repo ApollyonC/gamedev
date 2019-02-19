@@ -1,0 +1,13 @@
+<h1 aligh=center>All javaascript by Fred</h1>
+<script>
+function my01(){
+ document.all.myArea01.value='wow it workinh'
+}
+</scripr>
+<input type=text id="myText01" value="7"><br>
+
+<input type=text rows=4 cols=70></textarea><br>
+
+<input type=button value="Click first"onclick="{
+   my01()
+}">
