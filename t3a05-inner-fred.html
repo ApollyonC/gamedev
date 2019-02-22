@@ -1,3 +1,20 @@
 <h1 align=centre>InnerHTML by Fred</h1>
-//Put a link to the best help page about innerHTML in javascript 
-<br><a href="http://www.baidu.ca">click me</a12:24 PM 2/21/2019>
+<br><a href="http://www.baidu.ca">click me</a><br>
+
+x=<input tepy=text"myText01">
+
+<div id="myDiv01">...</div>
+
+<input type=button value="test innerHTML"onClick="{ 
+    document.all.myDiv01.innerHTML = 'Cool<font color=red>innerHTML</font> works.'
+}"><br>
+
+<input type=button value="CSS style" onClick="{ 
+    document.all.myDiv01.innerHTML=
+    'Cool <font style=\'color:red; background-color:blue;\'>color'
+     +'</font>cool'
+}"><br>
+
+<input type=button value="getElementById()" onClick="{ 
+    document.getElementById('myDiv01').innerHTML = 'Nice' 
+}">
