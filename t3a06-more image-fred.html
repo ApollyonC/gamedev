@@ -1,0 +1,27 @@
+<h2 align=center>Move image by Fred</h2>
+
+
+
+
+<input type=text value=0 onMouseOver="{
+   this.value='x='+document.getElementById('myImage01').style.left
+}">
+<br>
+
+
+<img src="myImage01.png" width="100px " id="myImage01" style="position:relative; left:440px; top:0px; height:100px; width:100px">
+<br>
+<br>
+<input type=button value="Go right" onClick="{
+   document.getElementById('myImage01').style.left=parseInt(document.getElementById('myImage01').style.left)+10+'px'
+}">
+<br>
+<input type=button value="Go down" onClick="{
+   document.getElementById('myImage01').style.top=parseInt(document.getElementById('myImage01').style.top)+10+'px'
+
+}">
+<br>
+<input type=button value="Go left" onClick="{
+   document.getElementById('myImage01').style.right=parseInt(document.getElementById('myImage01').style.right)+10+'px'
+
+}">
