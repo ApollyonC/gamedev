@@ -29,14 +29,21 @@
 	}">
 
 
-<input type=button value="Mediom" onClick="{	
+<input type=button value="Random alert" onClick="{	
         if(z<3){alert(z)}
 	else{alert(z)}
 	}">
-<input type=button value="Advanced" onclick="alert(i)">
+<input type=button value="Advanced" onclick="    
+   for(i=1:i<=3:i++){
+     document.all.myText01.value = "is not 3"
+} ">
+
+
+
+
 <input type=button value="Alert me" onclick="{
 
-alert(document.getElementById('myDiv01').innerHTML)
+alert(document.getElementById('myText01').value)
 }">
 
 
