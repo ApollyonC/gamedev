@@ -12,23 +12,45 @@
 
     <ol> Ordered list of program stuff in this course
     <li> input output
-
+    <li> Lo0ps
+    <li> Button 
+    <li> Var
+    <li>=
+    <li>-
+    <li>=-
+    <li>-==
+    <li>-=-
 `}" >
 
 
 <input type=button value="Basics" onClick="{
-  	document.getElementById('myDiv01').innerHTML = 'wow333';
+ 		console['error']('There is no error now.')
+		document.all.myText01.value='Please check the console - error'
+	}">
+
+
+<input type=button value="Mediom" onClick="{	
+        if(z<3){alert(z)}
+	else{alert(z)}
+	}">
+<input type=button value="Advanced" onclick="alert(i)">
+<input type=button value="Alert me" onclick="{
+
+alert(document.getElementById('myDiv01').innerHTML)
 }">
 
 
-<input type=button value="Mediom" onclick="{
-alert('as')
 
-}">
-<input type=button value="Advanced" onclick="{
+<script>
+var num = Math.random()*5 ;
+num = parseInt(num, 10);
+var i = num;
+    switch(i){
+     case 1: var z= "Please reload the page" ; break ;
+     case 2: var z= "Error ! reload please"; break ;
+     case 3: var z= "Invalid opcode ! reload"; break ;
+     case 4: var z= "Wrong ! please reload the page"; break ;
+     case 0: var z= "Reload and click me again"; break ; }
 
-alert('as')
-}">
-
-
+</script>
 
