@@ -1,0 +1,175 @@
+<html>
+ 
+<head>
+ 
+<style>
+ .move
+ {
+  margin-top: 0px;
+  width:40px;
+  height: 50px;
+  background: #ff0;
+  position:absolute;
+  z-index: 999;
+ }
+ 
+ 
+ .self
+ {
+  width:40px;
+  height: 50px;
+  background: #f0f;
+  position:absolute;
+  margin-top: 600px;
+  margin-left: 643px;
+  z-index: 999;
+ }
+ 
+ .self img
+ {
+  width:40px;
+  height: 50px;
+  border-radius: 20px;
+ }
+ 
+</style>
+ 
+<title>...</title> 
+ 
+</head>
+ 
+<body onload="moveDiv()">
+ <div class="move" style="margin-left:100px">
+ 
+ </div>
+ 
+ <div class="move" style="margin-left:200px">
+ 
+ </div>
+ <div class="move" style="margin-left:300px">
+ 
+ </div>
+ <div class="move" style="margin-left:400px">
+ 
+ </div>
+ 
+ <div class="move" style="margin-left:500px">
+ 
+ </div>
+ <div class="move" style="margin-left:600px">
+ 
+ </div>
+ <div class="move" style="margin-left:700px">
+ 
+ </div>
+ <div class="move" style="margin-left:800px">
+ 
+ </div>
+ 
+ <div class="move" style="margin-left:900px">
+ 
+ </div>
+ <div class="move" style="margin-left:1000px">
+ 
+ </div>
+ <div class="move" style="margin-left:1100px">
+ 
+ </div>
+ <div class="move" style="margin-left:1200px">
+ 
+ </div>
+ 
+
+
+ <div id="self" class="self">
+  <img src="images/tutu.jpg">
+ </div>
+ 
+</body>
+ 
+<script type="text/javascript">
+ 
+ var alldiv = document.querySelectorAll('.move');
+ var selfdiv = document.getElementById("self");
+ var timer, flag;
+ function moveItem()
+ {
+
+
+  for (var j = 0; j < Math.round(Math.random()*11); j++) 
+  {
+ 
+   var i = Math.round(Math.random()*11);
+   alldiv[i].style.top = alldiv[i].offsetTop + 20 +"px";
+ 
+   
+
+   var rgb='rgb('+Math.floor(Math.random()*255)+','
+      +Math.floor(Math.random()*255)+','
+      +Math.floor(Math.random()*255)+')';
+   alldiv[i].style.backgroundColor = rgb;
+ 
+   if (alldiv[i].offsetTop >= 600)
+   {
+    alldiv[i].style.top = "50px"; 
+
+   }
+  }
+ 
+ }
+ 
+ function moveDiv()
+ {
+  timer = setInterval(moveItem,20); 
+
+  flag = setInterval(meeting,1); 
+
+ }
+ 
+ var selfdiv = document.getElementById("self");
+ selfdiv.onmousedown = function(e) 
+
+ {
+  document.onmousemove = function(e) 
+
+  {
+   if (e.clientY > 600)
+   {
+    selfdiv.style.marginTop = "600px"; 
+
+   }
+   else if(e.clientX > 1300)
+   {
+    selfdiv.style.marginLeft = "1300px"; 
+
+   }
+   else
+   {
+   
+
+    selfdiv.style.marginTop = e.clientY + "px";
+    selfdiv.style.marginLeft = e.clientX + "px";
+   }
+  }
+ }
+ 
+ function meeting()
+ {
+  for (var i = 0; i < alldiv.length; i++)
+  {
+   
+
+
+   if (Math.abs(alldiv[i].offsetTop-selfdiv.offsetTop) <= 50 && 
+    Math.abs(alldiv[i].offsetLeft-selfdiv.offsetLeft) <= 40)
+   {
+    clearInterval(flag);
+    clearInterval(timer);
+    alert("game over");
+   }
+  }
+ }
+ 
+</script>
+ 
+</html>
