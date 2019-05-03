@@ -1,0 +1,62 @@
+t3a04-a11-fred
+<h1 align=center>All Javascript by Freds/h1>
+<script>
+
+function my01(){
+	document.all.myAreae1.value ='wow it worked'
+}</script>
+
+<input type=text id="myText01" value="7"><br>
+
+<textarea id="myArea01" rows=4 cols=70>...</textarea><br>
+
+<input type=button value="output and function" onclick="{my01()}">
+
+<input type=button value="input" onclick="{
+	document.all.myArea0l.value = document.all.myText01.value}">
+
+<input type=button value="loops" onclick="{document.all.myArea0l.value=''
+ for(x=1; x(<=3; x++){document.all.myArea01.value += x+','}}">
+
+<input type=button value="decisions" onclick="{
+	x = 9
+	if (x==9){
+	document.all.myArea01.value = 'Wow a nine'} else {
+	document.all.myArea01.value = 'Wow not a nine'
+}}">
+
+<input type=button value="arrays" onclick="{ 
+	myMax = 3
+	myArray = new Array (myMax)	
+	myArray[1] ='Fred'
+	myArray[2] ='Tom'
+	myArray[3] ='Mary'
+document.all.myArea01.value =''
+
+for (x = 1; x<=myMax; x++){
+	document.all.myArea01.value += myArray [x] +','
+}}">
+
+<input type=button value="events onmouseover" onmouseover="{
+	document.all.myAreael.value = 'You moused over the button.'}">
+
+<a href="https://www.w3schools.com/tags/ref eventattributes.asp">
+
+<events sites/a>
+<input type=button value="object Example" onClick="{ person ={
+	firstName: 'John',
+	lastName: 'Doe',
+	age: 50,
+	eyeColor: 'blue'}
+
+	document.all.myArea0l.value = 'person.firstName is ' + person.firstName +' person.age is '
+}">
+
+
+
+<input type=button value="class method" onClick="{
+	document.all.myArea0l.value = JSON.stringify(document, null, 3)
+}">
+<input type=button value="class property" onClick="{
+	document.all.myArea0l.value = 'property'
+}">
