@@ -1,28 +1,44 @@
-t3a05-inner-fred
-<!-- Saved as t3a05-inner-fred.html -->
-<h1 align=center>InnerHTML by Fred</h1>
-Put a link to the best help page about "innerHTML" in javascript
-<br>
-<a href="http://www.google.ca">google</a>
-<br>
-<input type=text id="myText01" value=7> <div id="myoivel>...</div>
+<h2 align=center>T4a05-local-storage-Antony.html</h2>
 
 
+<body onload="{
+    myStorage = localStorage.getItem('myStoredText')
+    //alert(myStorage )
+    if(myStorage  != null){
+       document.geElementById('myText1').value = myStorage
+      }
+}">
 
-<input type=button value="test innerHTML" onclick="{ document. all.myoive1.innerHTML = 'Cool' }" >
-
-
-
-<font colorared> innerHTML </font> works. it\'s awesome" 122
-
-
-
-<input type=button value="CSS style" onclick="{ document.al1.myDive1.innerHTML = 'Cool'}" >
-
-
-<font style=l' color:red; background-color:blue; \>color'+ s/fontycool.
+<body onunload="{
+   localstorage.setItem('myStoredText',document.getElementById('myText1').value)
 }">
 
 
-<input type-button value="getElementById()" onclick="{ document.getElementById('myDivel').innerHTML = Nice'}" >
+
+<h2>Instructions:</h2>
+Pass: Make several buttons to prove that you can store and retrieve each of these types of 
+variables:<br>
+Text example: fred<br> Integer exampe: 6<br> Decimal example: 6.34<br> Boolean example: true<br><br>
+
+Excellent:Also make buttons to store and retrieve a 1 D array of cool cars<br>
+Note: remember this kind of javascript code<br>
+<pre>
+   myCars = new Array()
+   myCars[1] = "BMW'
+   myCars[2] = "Smartcar'
+
+</pre>
+
+
+
+<input id ="myText1" type=text size=70 value="Write stuff here to be stored for the next time you come back to this site"><br>
+
+<input type="button" value="Store Text" onClick="{
+   localStorage.setItem('myStoredText',document.getElementById('myText1).value)
+   alert(document.getElementById('myText1').value + ' \nHas been stored')
+   document.getElementById('myText1).value = ''
+}">
+
+<input type="button" value="Retrieve Text" onClick="{
+   document.getElementById('myText1).value = localStorage.getItem('myStoredText')
 }">
