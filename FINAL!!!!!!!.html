@@ -1,0 +1,77 @@
+<br>
+
+<html>
+<input id="mytext02" type=text style= width:312px; height:350px; value = ''>
+
+<br>
+<br>
+<br>
+
+<input id="mytext01" type=text value=0 size=6><br>
+
+<body id="myBody" style="background-repeat:repeat;background-size: 25% " background=https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556651316951&di=470b1550c730f92138cbc648432b71f9&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F03866e75773613d0000012e7e0047c7.gif > 
+
+
+
+<div id="ad" style="position:relative;">
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557347473170&di=31d02acfa664f58c923bde6f12643ced&imgtype=0&src=http%3A%2F%2Fimg9.ph.126.net%2FyeZGJb7babBp5J55RC2m2w%3D%3D%2F1341791213980507699.gif" id="myImage02" border="0">
+</div>
+
+<script>
+
+var x = 1,y = 1
+var xin = true, yin = true
+var step = 1
+var delay = 10
+var obj=document.getElementById("ad")
+function floatAD() {
+var L = 10
+var T = 10
+var R = document.body.clientWidth-obj.offsetWidth-10
+var B = document.body.clientHeight-obj.offsetHeight
+obj.style.left = x + document.body.scrollLeft
+obj.style.top = y + document.body.scrollTop
+x = x + step*(xin?1:-1)
+if (x < L) { xin = true; x = L}
+if (x > R){ xin = false; x = R}
+y = y + step*(yin?1:-1)
+if (y < T) { yin = true; y = T }
+if (y > B) { yin = false; y = B }
+}
+var itl= setInterval("floatAD()", delay)
+obj.onmouseover=function(){
+  alert('you lose')
+  location = 'http://www.google.ca'
+
+}
+obj.onmouseout=function(){itl=setInterval("floatAD()", delay)}
+
+</script>
+
+
+<div id="divFly" style="position:absolute;">
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556650649285&di=64dce01c882e6b00aeff6a7f408c41a1&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160415%2Ffb7b08361cae4945ba3a623177669085.jpg" id="myImage01" width="120px "  > 
+</div>
+
+<script>
+
+function DivFlying() {
+  var div = document.getElementById("divFly");
+  if (!div) {
+  return;
+  }
+  var intX = window.event.clientX;
+  var intY = window.event.clientY;
+  div.style.left = intX + "px";
+  div.style.top = intY + "px";
+}
+document.onmousemove = DivFlying;
+
+</script>
+
+
+</body>
+
+</html>
+
+
